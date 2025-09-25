@@ -43,7 +43,7 @@ app.use('/api/v1/jobs', authenticationMiddleware, jobsRouter);
 app.use('/api/v1/auth', authenticationRouter);
 
 app.get('/', (req, res) => {
-  res.send('jobs api');
+  res.status(200).send('jobs api');
 });
 
 app.use(notFoundMiddleware);
